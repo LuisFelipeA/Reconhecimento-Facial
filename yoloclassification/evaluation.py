@@ -4,7 +4,8 @@ import csv
 from tqdm import tqdm
 
 # Carrega o modelo YOLO a partir do arquivo de pesos
-model = YOLO("C:\\Users\\felip\\source\\repos\\Reconhecimento Facial\\runs\\classify\\train2\\weights\\best.pt")
+# model = YOLO("C:\\Users\\felip\\source\\repos\\Reconhecimento Facial\\runs\\classify\\train2\\weights\\best.pt")
+model = YOLO("..\\Reconhecimento Facial\\runs\\classify\\train2\\weights\\best.pt")
 
 # Função para processar uma imagem e salvar os resultados
 def process_image_and_save_results(image_path):
@@ -44,7 +45,8 @@ def process_image_and_save_results(image_path):
     return results
 
 # Pasta que contém as subpastas com imagens
-root_folder = "C:\\Users\\felip\\source\\repos\\Reconhecimento Facial\\FotosTiradas"
+# root_folder = "C:\\Users\\felip\\source\\repos\\Reconhecimento Facial\\FotosTiradas"
+root_folder = "..\\Reconhecimento Facial\\FotosTiradas"
 
 # Obtém o número total de arquivos de imagem para a barra de progresso
 total_images = sum(len(files) for _, _, files in os.walk(root_folder) if files)

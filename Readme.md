@@ -15,7 +15,7 @@ Para que a aplicação possa funcionar instale primeiro as dependências do proj
 
 ***OBS¹:*** Não recomendamos o uso da última versão do python **(3.12.1)**, pois tivemos alguns problemas para instalar as dependencias. Pode ser usada a versão **(3.10.12)** ou **(3.11.5)**. Pode funcionar em outras versões também.
 
-***OBS²:*** Se durante a execução de algum dos processos a seguir erros referentes a caminhos/*paths* forem retornados, recomendamos que substitua os seguintes trechos de código que especificam à aplicação paths relativos de determinados arquivos para os paths absolutos em seu sistema:
+***OBS²:*** Se durante a execução de algum dos processos a seguir erros referentes a caminhos/*paths* forem retornados, recomendamos que substitua os seguintes trechos de código que especificam paths relativos de determinados arquivos para os paths absolutos em seu sistema:
 
  Arquivo: evaluation.py
 ```python 

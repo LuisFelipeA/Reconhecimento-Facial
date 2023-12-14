@@ -21,7 +21,7 @@ O repositorio já está treinado, então você pode rodar o arquivo `Reconhecime
 
 **Exemplo do resultado de um dos testes**
 ![Alt text](img_readme1.jpeg)
-<img src="img_readme1.jpeg"/>
+<img src="./img_readme1.jpeg"/>
 
 Aqui apenas uma foto que mandei para comparar foi reconhecida
 
@@ -32,6 +32,6 @@ Para treinar um novo modelo você precisa criar uma pasta chamada **DataSet** de
 Agora você pode rodar  o arquivo `yoloclassificador.py` que irá treinar seu novo modelo. Após ser treinado será criada uma nova pasta chamada **train** se ela já existir vai ter uma numeração no nome (ex: `train3`), basta ir então até o arquivo `evaluation.py` e alterar o seguinte trecho do caminho para o diretório: 
 
 ![Alt text](img_readme2.jpeg)
-<img src="img_readme2.jpeg"/>
+<img src="./img_readme2.jpeg"/>
 
 No caso do nosso exemplo trocaríamos o `/train2` por `/train3`

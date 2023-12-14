@@ -5,12 +5,12 @@ import shutil
 import mediapipe as mp
 import time
 
-pathState = os.path.exists('../Reconhecimento-Facial/FotosTiradas')
+pathState = os.path.exists("../Reconhecimento-Facial/FotosTiradas")
 if (not pathState):
-    os.mkdir('../Reconhecimento-Facial/FotosTiradas')
+    os.mkdir("../Reconhecimento-Facial/FotosTiradas")
 else:
-    shutil.rmtree('../Reconhecimento-Facial/FotosTiradas')
-    os.mkdir('../Reconhecimento-Facial/FotosTiradas')
+    shutil.rmtree("../Reconhecimento-Facial/FotosTiradas")
+    os.mkdir("../Reconhecimento-Facial/FotosTiradas")
     
 # Inicializando a captura da webcam
 webcam = cv2.VideoCapture(0)

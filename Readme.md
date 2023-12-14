@@ -20,7 +20,7 @@ Para que a aplicação possa funcionar instale primeiro as dependências do proj
 O repositorio já está treinado, então você pode rodar o arquivo `ReconhecimentoFacial.py` que abrirá sua **webcam** e vai tirar algumas fotos sua. Com as fotos tirada agora voce pode rodar o arquivo `evaluation.py` que vai comparar as fotos com o nosso modelo. Quando terminar de rodar vai ser criado um arquivo chamado `output_results.csv`, nele estão os resultados, caso seu rosto não seja reconhecido ele vai estar como desconhecido.
 
 **Exemplo do resultado de um dos testes**
-![Alt text](./doc/img_readme1.jpeg)
+![Alt text](img_readme1.jpeg)
 
 Aqui apenas uma foto que mandei para comparar foi reconhecida
 
@@ -30,6 +30,6 @@ Para treinar um novo modelo você precisa criar uma pasta chamada **DataSet** de
 
 Agora você pode rodar  o arquivo `yoloclassificador.py` que irá treinar seu novo modelo. Após ser treinado será criada uma nova pasta chamada **train** se ela já existir vai ter uma numeração no nome (ex: `train3`), basta ir então até o arquivo `evaluation.py` e alterar o seguinte trecho do caminho para o diretório: 
 
-![Alt text](./doc/img_readme2.jpeg)
+![Alt text](img_readme2.jpeg)
 
 No caso do nosso exemplo trocaríamos o `/train2` por `/train3`

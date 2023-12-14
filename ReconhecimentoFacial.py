@@ -1,8 +1,17 @@
 # Importando as bibliotecas necessárias
 import cv2
+import os
+import shutil
 import mediapipe as mp
 import time
 
+pathState = os.path.exists('../Reconhecimento-Facial/FotosTiradas')
+if (not pathState):
+    os.mkdir('../Reconhecimento-Facial/FotosTiradas')
+else:
+    shutil.rmtree('../Reconhecimento-Facial/FotosTiradas')
+    os.mkdir('../Reconhecimento-Facial/FotosTiradas')
+    
 # Inicializando a captura da webcam
 webcam = cv2.VideoCapture(0)
 
@@ -11,6 +20,8 @@ reconhecimento_rosto = mp.solutions.face_detection
 desenho = mp.solutions.drawing_utils
 reconhecedor_rosto = reconhecimento_rosto.FaceDetection()
 start_time = time.time()
+
+
 
 # Loop principal para processar cada quadro da webcam
 while webcam.isOpened():
@@ -45,7 +56,8 @@ while webcam.isOpened():
 
             # Desenhando o retângulo ao redor do rosto e salvando a imagem
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            cv2.imwrite(f'..\\Reconhecimento Facial\\FotosTiradas\\rosto_{int(time.time())}.jpg', frame[y:y + h, x:x + w])
+           
+            cv2.imwrite(f'../Reconhecimento-Facial/FotosTiradas/rosto_{int(time.time())}.jpg', frame[y:y + h, x:x + w])
             print(f'Imagem capturada: rosto_{int(time.time())}.jpg')
             start_time = time.time()
 

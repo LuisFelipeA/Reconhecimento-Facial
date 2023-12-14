@@ -46,6 +46,7 @@ def process_image_and_save_results(image_path):
 
 # Pasta que contém as subpastas com imagens
 # root_folder = "C:\\Users\\felip\\source\\repos\\Reconhecimento Facial\\FotosTiradas"
+
 root_folder = "../Reconhecimento-Facial/FotosTiradas"
 
 # Obtém o número total de arquivos de imagem para a barra de progresso

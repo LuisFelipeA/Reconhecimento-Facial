@@ -5,12 +5,14 @@ import shutil
 import mediapipe as mp
 import time
 
-pathState = os.path.exists("../Reconhecimento-Facial/FotosTiradas")
+folderPath = "../Reconhecimento-Facial/FotosTiradas"
+
+pathState = os.path.exists(folderPath)
 if (not pathState):
-    os.mkdir("../Reconhecimento-Facial/FotosTiradas")
+    os.mkdir(folderPath)
 else:
-    shutil.rmtree("../Reconhecimento-Facial/FotosTiradas")
-    os.mkdir("../Reconhecimento-Facial/FotosTiradas")
+    shutil.rmtree(folderPath)
+    os.mkdir(folderPath)
     
 # Inicializando a captura da webcam
 webcam = cv2.VideoCapture(0)
@@ -57,7 +59,7 @@ while webcam.isOpened():
             # Desenhando o retângulo ao redor do rosto e salvando a imagem
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
            
-            cv2.imwrite(f'../Reconhecimento-Facial/FotosTiradas/rosto_{int(time.time())}.jpg', frame[y:y + h, x:x + w])
+            cv2.imwrite(f'{folderPath}'+f'/rosto_{int(time.time())}.jpg', frame[y:y + h, x:x + w])
             print(f'Imagem capturada: rosto_{int(time.time())}.jpg')
             start_time = time.time()
 
